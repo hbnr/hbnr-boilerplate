@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  postgres:
+    image: "postgres:15"
+    environment:
+      - "POSTGRES_DB=hbnr"
+      - "POSTGRES_USER=hbnr"
+      - "POSTGRES_PASSWORD=hbnr"
+    volumes:
+      - "pg01:/var/lib/postgresql"
+    ports:
+      - "5432:5432"
+
+volumes:
+  pg01: {}

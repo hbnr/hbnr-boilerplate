@@ -1,0 +1,9 @@
+{
+  "name": "HBNR_Boilerplate",
+  "version": "0.0.1",
+  "description": "A base project with backend in Nest.js and frontend in Angular",
+  "main": "index.js",
+  "author": "Sammy Hubner <smmy@hbnr.nl>",
+  "license": "MIT",
+  "private": true
+}

@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {ProfileComponent} from 'src/app/profile/profile.component';
 
 const routes: Routes = [
-    {path: 'profile', component: ProfileComponent},
+    {path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)},
+    {path: 'sign-up', loadChildren: () => import('./sign-up/sign-up.module').then(m => m.SignUpModule)},
     {path: '**', redirectTo: 'profile'}
 ];
 

@@ -1,10 +1,15 @@
-import {Component, HostBinding, Input, OnDestroy, OnInit} from '@angular/core';
-import {ControlValueAccessor, FormControl} from '@angular/forms';
+import {Component, forwardRef, HostBinding, Input, OnDestroy, OnInit} from '@angular/core';
+import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {Subscription} from 'rxjs';
 
 @Component({
     selector: 'ui-input-field',
     templateUrl: './input-field.component.html',
+    providers: [{
+        provide: NG_VALUE_ACCESSOR,
+        useExisting: forwardRef(() => InputFieldComponent),
+        multi: true
+    }],
 })
 export class InputFieldComponent<T> implements OnInit, OnDestroy, ControlValueAccessor {
     @Input() label = '';

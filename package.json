@@ -6,7 +6,5 @@
   "author": "Sammy Hubner <smmy@hbnr.nl>",
   "license": "MIT",
   "private": true,
-  "devDependencies": {
-    "@nestjs/cli": "^10.1.0"
-  }
+  "devDependencies": {}
 }

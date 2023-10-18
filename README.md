@@ -9,13 +9,12 @@ I intend to write a backend with some basic authorization features and tests
 ```
 docker-compose up -d          # run the docker container
 cd backend                    # navigate to the backend-directory
-vi .env                       # uncomment and change environment variables
+cp env .env && vi .env        # uncomment and change environment variables
 yarn                          # install all dependencies
 yarn prisma migrate dev       # fill your database
 yarn start                    # start the backend, which by default can be found on http://localhost:3000
 ```
-
-** Create user / login / get account-data**
+**Create user / login / get account-data**
 ```
 # create first user 
 curl -d "email=test%40email.lol&password=supersecret" http://localhost:3000/auth/signup
